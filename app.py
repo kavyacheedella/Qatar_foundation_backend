@@ -9,7 +9,6 @@ from routes import routes
 
 
 def create_app() -> Flask:
-   
     app = Flask(
         __name__,
         static_folder="static",
@@ -52,7 +51,7 @@ def _init_db():
 # ─────────────────────────────────────────────────────────────
 #  Run
 # ─────────────────────────────────────────────────────────────
-
+app = create_app()
 if __name__ == "__main__":
-    app = create_app()
+   
     app.run(port=5000)
